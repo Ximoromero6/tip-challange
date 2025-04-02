@@ -1,0 +1,227 @@
+body {
+  background-color: $Grey_200;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+
+  .logo {
+    &:focus {
+      outline: 2px solid $Green_900;
+      outline-offset: 4px;
+    }
+  }
+
+  .container__calculator {
+    background-color: $White;
+    padding: 30px;
+    display: flex;
+    border-radius: 20px;
+    min-width: 850px;
+    gap: 20px;
+
+    &-form {
+      padding: 20px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 35px;
+
+      .field {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        label {
+          font-weight: 600;
+          font-size: 18px;
+          color: $Grey_500;
+        }
+
+        .field-container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 0 15px;
+          gap: 10px;
+          background-color: $Grey_50;
+          border-radius: 5px;
+
+          i {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 16px;
+            color: $Grey_400;
+          }
+
+          input {
+            border: none;
+            width: 100%;
+            height: 100%;
+            flex: 1;
+            background-color: transparent;
+            font-size: 24px;
+            font-weight: 600;
+            font-family: inherit;
+            color: $Green_900;
+            text-align: right;
+            cursor: pointer;
+            padding: 5px 0;
+
+            &::placeholder {
+              color: $Grey_400;
+            }
+
+            &::-webkit-outer-spin-button,
+            &::-webkit-inner-spin-button {
+              -webkit-appearance: none;
+              margin: 0;
+            }
+            input[type="number"] {
+              -moz-appearance: textfield;
+            }
+
+            &:focus {
+              outline: none;
+            }
+          }
+
+          &:focus-within {
+            outline: 2px solid $Green_400;
+          }
+        }
+
+        .percentage-container {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+          gap: 15px;
+
+          .tip_button,
+          .custom-input {
+            padding: 5px;
+            font-size: 24px;
+            background-color: $Green_900;
+            font-family: inherit;
+            color: $White;
+            border: none;
+            text-align: center;
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: background 0.1s;
+
+            &:hover {
+              background-color: lighten($Green_400, 30);
+              color: $Green_900;
+            }
+
+            &:focus {
+              outline: 2px solid $Green_400;
+            }
+
+            &.custom {
+              background-color: $Grey_50;
+              color: $Grey_500;
+            }
+
+            &.selected {
+              background-color: $Green_400;
+              color: $Green_900;
+            }
+          }
+
+          .custom-input {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $Grey_50;
+            color: $Green_900;
+
+            &::-webkit-outer-spin-button,
+            &::-webkit-inner-spin-button {
+              -webkit-appearance: none;
+              margin: 0;
+            }
+            input[type="number"] {
+              -moz-appearance: textfield;
+            }
+
+            &:hover {
+              background-color: $Grey_50;
+            }
+          }
+        }
+      }
+    }
+
+    &-results {
+      flex: 1;
+      padding: 40px;
+      background-color: $Green_900;
+      border-radius: 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .container-info {
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+
+        .tip-amount-person,
+        .total-person {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          p {
+            color: $White;
+            font-weight: 600;
+
+            span {
+              color: $Grey_200;
+              font-weight: normal;
+              display: block;
+              margin: 10px 0;
+            }
+          }
+
+          h3 {
+            font-size: 42px;
+            color: $Green_400;
+            font-weight: 600;
+          }
+        }
+      }
+
+      #resetBtn {
+        width: 100%;
+        border: none;
+        padding: 5px;
+        text-align: center;
+        background-color: $Green_400;
+        color: $Green_900;
+        font-family: inherit;
+        text-transform: uppercase;
+        font-size: 24px;
+        border-radius: 5px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.1s;
+
+        &:focus {
+          outline: 2px solid $Green_400;
+        }
+
+        &:hover {
+          background-color: lighten($Green_400, 30);
+        }
+      }
+    }
+  }
+}

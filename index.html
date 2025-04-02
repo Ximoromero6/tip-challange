@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-chubby/css/uicons-solid-chubby.css"
+    />
+    <link
+      rel="shortcut icon"
+      href="assets/images/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <title>Tip Calculator - Ximo Romero</title>
+  </head>
+  <body>
+    <main>
+      <a href="" class="logo">
+        <img src="assets/images/logo.svg" alt="" />
+      </a>
+
+      <div class="container__calculator">
+        <div class="container__calculator-form">
+          <div class="field">
+            <label>Bill</label>
+            <div class="field-container">
+              <i class="fi fi-br-euro"></i>
+              <input type="number" id="billTotal" placeholder="0" />
+            </div>
+          </div>
+          <div class="field">
+            <label>Select Tip %</label>
+            <div class="percentage-container">
+              <button class="tip_button" data-tip="5">5%</button>
+              <button class="tip_button" data-tip="10">10%</button>
+              <button class="tip_button" data-tip="15">15%</button>
+              <button class="tip_button" data-tip="25">25%</button>
+              <button class="tip_button" data-tip="50">50%</button>
+              <button class="tip_button custom" data-tip="custom">
+                Custom
+              </button>
+            </div>
+          </div>
+          <div class="field">
+            <label>Number of People</label>
+            <div class="field-container">
+              <i class="fi fi-ss-user"></i>
+              <input type="number" id="peopleTotal" placeholder="0" />
+            </div>
+          </div>
+        </div>
+        <div class="container__calculator-results">
+          <div class="container-info">
+            <div class="tip-amount-person">
+              <p>
+                Tip Amount <br />
+                <span>/ person</span>
+              </p>
+              <h3>€0.00</h3>
+            </div>
+            <div class="total-person">
+              <p>
+                Total <br />
+                <span>/ person</span>
+              </p>
+              <h3>€0.00</h3>
+            </div>
+          </div>
+          <button id="resetBtn">reset</button>
+        </div>
+      </div>
+    </main>
+
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>

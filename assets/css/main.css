@@ -1,0 +1,326 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-chubby/css/uicons-regular-chubby.css");
+@import url("https://cdn-uicons.flaticon.com/2.6.0/uicons-bold-rounded/css/uicons-bold-rounded.css");
+@import url("https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-rounded/css/uicons-solid-rounded.css");
+@import url("https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-straight/css/uicons-solid-straight.css");
+@import url("https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-rounded/css/uicons-solid-rounded.css");
+@import url("https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-chubby/css/uicons-solid-chubby.css");
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+code,
+em,
+img,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+b,
+u,
+i,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+main,
+canvas,
+embed,
+footer,
+header,
+nav,
+section,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
+     -moz-text-size-adjust: none;
+          text-size-adjust: none;
+}
+
+footer,
+header,
+nav,
+section,
+main {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  font-family: "Space Mono", monospace;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+body {
+  background-color: hsl(185, 41%, 84%);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+main .logo:focus {
+  outline: 2px solid hsl(183, 100%, 15%);
+  outline-offset: 4px;
+}
+main .container__calculator {
+  background-color: hsl(0, 100%, 100%);
+  padding: 30px;
+  display: flex;
+  border-radius: 20px;
+  min-width: 850px;
+  gap: 20px;
+}
+main .container__calculator-form {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+main .container__calculator-form .field {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+main .container__calculator-form .field label {
+  font-weight: 600;
+  font-size: 18px;
+  color: hsl(186, 14%, 43%);
+}
+main .container__calculator-form .field .field-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 15px;
+  gap: 10px;
+  background-color: hsl(189, 47%, 97%);
+  border-radius: 5px;
+}
+main .container__calculator-form .field .field-container i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  color: hsl(184, 14%, 56%);
+}
+main .container__calculator-form .field .field-container input {
+  border: none;
+  width: 100%;
+  height: 100%;
+  flex: 1;
+  background-color: transparent;
+  font-size: 24px;
+  font-weight: 600;
+  font-family: inherit;
+  color: hsl(183, 100%, 15%);
+  text-align: right;
+  cursor: pointer;
+  padding: 5px 0;
+}
+main .container__calculator-form .field .field-container input::-moz-placeholder {
+  color: hsl(184, 14%, 56%);
+}
+main .container__calculator-form .field .field-container input::placeholder {
+  color: hsl(184, 14%, 56%);
+}
+main .container__calculator-form .field .field-container input::-webkit-outer-spin-button, main .container__calculator-form .field .field-container input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+main .container__calculator-form .field .field-container input input[type=number] {
+  -moz-appearance: textfield;
+}
+main .container__calculator-form .field .field-container input:focus {
+  outline: none;
+}
+main .container__calculator-form .field .field-container:focus-within {
+  outline: 2px solid hsl(172, 67%, 45%);
+}
+main .container__calculator-form .field .percentage-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  gap: 15px;
+}
+main .container__calculator-form .field .percentage-container .tip_button,
+main .container__calculator-form .field .percentage-container .custom-input {
+  padding: 5px;
+  font-size: 24px;
+  background-color: hsl(183, 100%, 15%);
+  font-family: inherit;
+  color: hsl(0, 100%, 100%);
+  border: none;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: background 0.1s;
+}
+main .container__calculator-form .field .percentage-container .tip_button:hover,
+main .container__calculator-form .field .percentage-container .custom-input:hover {
+  background-color: #95eadf;
+  color: hsl(183, 100%, 15%);
+}
+main .container__calculator-form .field .percentage-container .tip_button:focus,
+main .container__calculator-form .field .percentage-container .custom-input:focus {
+  outline: 2px solid hsl(172, 67%, 45%);
+}
+main .container__calculator-form .field .percentage-container .tip_button.custom,
+main .container__calculator-form .field .percentage-container .custom-input.custom {
+  background-color: hsl(189, 47%, 97%);
+  color: hsl(186, 14%, 43%);
+}
+main .container__calculator-form .field .percentage-container .tip_button.selected,
+main .container__calculator-form .field .percentage-container .custom-input.selected {
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+}
+main .container__calculator-form .field .percentage-container .custom-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(189, 47%, 97%);
+  color: hsl(183, 100%, 15%);
+}
+main .container__calculator-form .field .percentage-container .custom-input::-webkit-outer-spin-button, main .container__calculator-form .field .percentage-container .custom-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+main .container__calculator-form .field .percentage-container .custom-input input[type=number] {
+  -moz-appearance: textfield;
+}
+main .container__calculator-form .field .percentage-container .custom-input:hover {
+  background-color: hsl(189, 47%, 97%);
+}
+main .container__calculator-results {
+  flex: 1;
+  padding: 40px;
+  background-color: hsl(183, 100%, 15%);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+main .container__calculator-results .container-info {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+main .container__calculator-results .container-info .tip-amount-person,
+main .container__calculator-results .container-info .total-person {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .container__calculator-results .container-info .tip-amount-person p,
+main .container__calculator-results .container-info .total-person p {
+  color: hsl(0, 100%, 100%);
+  font-weight: 600;
+}
+main .container__calculator-results .container-info .tip-amount-person p span,
+main .container__calculator-results .container-info .total-person p span {
+  color: hsl(185, 41%, 84%);
+  font-weight: normal;
+  display: block;
+  margin: 10px 0;
+}
+main .container__calculator-results .container-info .tip-amount-person h3,
+main .container__calculator-results .container-info .total-person h3 {
+  font-size: 42px;
+  color: hsl(172, 67%, 45%);
+  font-weight: 600;
+}
+main .container__calculator-results #resetBtn {
+  width: 100%;
+  border: none;
+  padding: 5px;
+  text-align: center;
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+  font-family: inherit;
+  text-transform: uppercase;
+  font-size: 24px;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.1s;
+}
+main .container__calculator-results #resetBtn:focus {
+  outline: 2px solid hsl(172, 67%, 45%);
+}
+main .container__calculator-results #resetBtn:hover {
+  background-color: #95eadf;
+}/*# sourceMappingURL=main.css.map */
