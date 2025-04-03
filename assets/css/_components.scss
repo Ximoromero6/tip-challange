@@ -11,7 +11,7 @@ main {
 
   .logo {
     &:focus {
-      outline: 2px solid $Green_900;
+      outline: 2px solid $Green_400;
       outline-offset: 4px;
     }
   }
@@ -21,8 +21,9 @@ main {
     padding: 30px;
     display: flex;
     border-radius: 20px;
-    min-width: 850px;
+    min-width: 900px;
     gap: 20px;
+    margin: 15px;
 
     &-form {
       padding: 20px;
@@ -94,6 +95,12 @@ main {
           &:focus-within {
             outline: 2px solid $Green_400;
           }
+
+          &.people {
+            &.error {
+              outline: 2px solid #D2042D;
+            }
+          }
         }
 
         .percentage-container {
@@ -154,6 +161,16 @@ main {
             &:hover {
               background-color: $Grey_50;
             }
+          }
+        }
+
+        .container_field-error {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          .people-error {
+            color: #d2042d;
           }
         }
       }
@@ -220,6 +237,29 @@ main {
 
         &:hover {
           background-color: lighten($Green_400, 30);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  main {
+    .container__calculator {
+      min-width: auto;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  main {
+    .container__calculator {
+      flex-direction: column;
+      margin: 0;
+
+      &-results {
+        #resetBtn {
+          margin-top: 40px;
         }
       }
     }

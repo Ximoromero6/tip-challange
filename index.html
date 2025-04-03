@@ -22,7 +22,7 @@
       </a>
 
       <div class="container__calculator">
-        <div class="container__calculator-form">
+        <form class="container__calculator-form" id="calculatorTipForm">
           <div class="field">
             <label>Bill</label>
             <div class="field-container">
@@ -33,24 +33,35 @@
           <div class="field">
             <label>Select Tip %</label>
             <div class="percentage-container">
-              <button class="tip_button" data-tip="5">5%</button>
-              <button class="tip_button" data-tip="10">10%</button>
-              <button class="tip_button" data-tip="15">15%</button>
-              <button class="tip_button" data-tip="25">25%</button>
-              <button class="tip_button" data-tip="50">50%</button>
-              <button class="tip_button custom" data-tip="custom">
+              <button type="button" class="tip_button" data-tip="5">5%</button>
+              <button type="button" class="tip_button" data-tip="10">
+                10%
+              </button>
+              <button type="button" class="tip_button" data-tip="15">
+                15%
+              </button>
+              <button type="button" class="tip_button" data-tip="25">
+                25%
+              </button>
+              <button type="button" class="tip_button" data-tip="50">
+                50%
+              </button>
+              <button type="button" class="tip_button custom" data-tip="custom">
                 Custom
               </button>
             </div>
           </div>
           <div class="field">
-            <label>Number of People</label>
-            <div class="field-container">
+            <div class="container_field-error">
+              <label>Number of People</label>
+              <label class="people-error"></label>
+            </div>
+            <div class="field-container people">
               <i class="fi fi-ss-user"></i>
               <input type="number" id="peopleTotal" placeholder="0" />
             </div>
           </div>
-        </div>
+        </form>
         <div class="container__calculator-results">
           <div class="container-info">
             <div class="tip-amount-person">
