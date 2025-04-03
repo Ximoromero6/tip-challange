@@ -212,7 +212,7 @@ main .container__calculator-form .field .field-container:focus-within {
   outline: 2px solid hsl(172, 67%, 45%);
 }
 main .container__calculator-form .field .field-container.people.error {
-  outline: 2px solid #D2042D;
+  outline: 2px solid #d2042d;
 }
 main .container__calculator-form .field .percentage-container {
   display: grid;
@@ -336,10 +336,13 @@ main .container__calculator-results #resetBtn:focus {
 main .container__calculator-results #resetBtn:hover {
   background-color: #95eadf;
 }
+main .container__calculator-results #resetBtn:disabled {
+  background-color: #006166;
+}
 
 @media (max-width: 992px) {
   main .container__calculator {
-    min-width: auto;
+    min-width: none;
   }
 }
 @media (max-width: 768px) {

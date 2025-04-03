@@ -98,7 +98,7 @@ main {
 
           &.people {
             &.error {
-              outline: 2px solid #D2042D;
+              outline: 2px solid #d2042d;
             }
           }
         }
@@ -238,6 +238,10 @@ main {
         &:hover {
           background-color: lighten($Green_400, 30);
         }
+
+        &:disabled {
+          background-color: lighten($Green_900, 5);
+        }
       }
     }
   }
@@ -246,7 +250,7 @@ main {
 @media (max-width: 992px) {
   main {
     .container__calculator {
-      min-width: auto;
+      min-width: none;
     }
   }
 }

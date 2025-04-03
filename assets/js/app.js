@@ -29,6 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function handleTipSelection(evt) {
     buttons.forEach((btn) => btn.classList.remove("selected"));
+    resetBtn.disabled = false;
 
     if (evt.target === customButton) {
       let input = document.createElement("input");
@@ -62,6 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   function calculateTip() {
+    resetBtn.disabled = false;
     const bill = parseFloat(billInput.value) || 0;
     const people = parseInt(peopleInput.value) || 0;
     const tipPercentage = parseFloat(selectedTip) || 0;
@@ -92,6 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
     buttons.forEach((btn) => btn.classList.remove("selected"));
     tipAmountDisplay.textContent = "€0.00";
     totalPerPersonDisplay.textContent = "€0.00";
+    resetBtn.disabled = true;
 
     //Restore custom button in case was changed
     showPeopleError(false);
