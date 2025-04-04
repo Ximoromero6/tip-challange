@@ -342,7 +342,7 @@ main .container__calculator-results #resetBtn:disabled {
 
 @media (max-width: 992px) {
   main .container__calculator {
-    min-width: none;
+    min-width: 0;
   }
 }
 @media (max-width: 768px) {

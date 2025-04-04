@@ -250,7 +250,7 @@ main {
 @media (max-width: 992px) {
   main {
     .container__calculator {
-      min-width: none;
+      min-width: 0;
     }
   }
 }
